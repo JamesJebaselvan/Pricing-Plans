@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Animaker Pricing Plans</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+/*      body{
+          background: #d5d5d5;
+      }*/
+      .jumbotron{
+          background: white;
+          max-width: 950px;
+          width:100%;
+          padding: 2rem 4rem;
+          text-align: left;
+          padding-bottom: 0;
+          margin-bottom: 0;
+      }
+      .choose-plan{
+          text-align: center;
+           margin-bottom: 0;
+      }
+      ul{
+          margin: 30px 15px 15px 30px;
+          padding: 0;
+          text-align: left;
+      }
+      ul li{
+          list-style: none;
+          text-align: left;
+          list-style-image: url('images/check.svg');
+          font-size: 12px;
+      }
+      .card{
+         text-align: center;
+         box-shadow: 2px 3px 23px 3px #88888880;
+         max-width: 220px;
+        margin: auto;
+        height: 275px;
+      }
+      .color-strip{
+          height: 10px;
+          background: pink;
+      }
+      .pricing-cards .col:nth-child(1) span.color-strip{
+          background: #6be163;
+      }
+      .pricing-cards .col:nth-child(2) span.color-strip{
+          background: #ffc302;
+      }
+      .pricing-cards .col:nth-child(3) span.color-strip{
+          background:#d4afff;
+      }
+      .pricing-cards .col:nth-child(4) span.color-strip{
+          background: #db2f41;
+      }
+      label{
+        margin: 0;
+      }
+      .card p{
+          opacity: 0.4;
+          font-size: 12px;
+      }
+      .card h1{
+          font-size: 20px;
+      }
+      .card-content{
+          padding: 10px;
+          height: 264px;
+      }
+      .card-content label{
+          float: left;
+          font-size: 14px;
+          font-weight: bold;
+      }
+      .card-content h3{
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .card img{
+/*        width: 100%;
+        max-width: 100px;*/
+        margin: 5px 20px 20px 20px;
+      }
+      .card-content .col{
+          padding:0;
+      }
+      .card-content p{
+          height: 30px;
+      }
+      sub{
+          font-size: 10px;
+      }
+      .container{
+        max-width: 950px;
+        margin-left: 50px;
+      }
+      button{
+        border-radius: 5px;
+        /*background: brown;*/
+        font-size: 12px;
+        padding: 5px;
+        border: none;
+        font-weight: 500;
+            height: 32px;
+      }
+      
+      .btn-grad {background-image: linear-gradient(to right, #f66aa7 0%, #d2c308  51%, #bfe9ff  100%)}
+      .btn-grad {
+          /*margin: 10px;*/
+          /*padding: 15px 45px;*/
+          text-align: center;
+          transition: 0.5s;
+          background-size: 200% auto;
+          color: black;
+          box-shadow: 0 0 20px #eee;
+/*          border-radius: 10px;*/
+          display: block;
+          width: 100%;
+          display: block;
+      }
+
+      .btn-grad:hover {
+          background-position: right center; /* change the direction of the change here */
+          color: #fff;
+          text-decoration: none;
+      }
+      .card:hover{
+          cursor: pointer;
+          transform: scale(1.05); 
+          transition: transform 0.2s;
+      }
+      .modal-header,.modal-footer{
+          border: none;
+      }
+      .form-label{
+          font-size: 11px;
+      }
+      .modal-dialog{
+          max-width: 350px;
+      }
+      .close-btn{
+          position: absolute;
+          right: 5px;
+          top: -10px;
+          height: 15px;
+        width: 15px;
+        border-radius: 15px;
+      }
+      .modal-title{
+          font-size: 14px;
+      }
+      form{
+          margin-top: 10px;
+      }
+      .close-btn > span{
+        position: relative;
+        top: -7px;
+      }
+      @media only screen and (max-width:1050px){
+          .container,.jumbotron{
+              margin: auto;
+              width: 100%;
+          }  
+      }
+      @media only screen and (max-width:950px){
+          .col-sm-6{
+              flex: 0 0 50%;
+            max-width: 50%;
+          }
+          .card + ul{
+            margin: 30px auto;
+            width: 50%;
+          }
+      }
+      @media only screen and (max-width:600px){
+          .col-md-3.col-sm-6{
+            flex: 0 0 100%;
+            max-width: 100%;
+          }
+      }
+  </style>
+  <script type="text/javascript">
+      function openAlert(title){
+         $("#testAlert").modal('show');
+         $("#modal-title").text(title);
+      }
+  </script>
+</head>
+<body>
+    <div id="testAlert" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-body">
+            <div class="row">
+                <div class="col">
+                    <center><h5 id="modal-title" class="modal-title"></h5></center>
+                    <button type="button" class="close-btn" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div><br>
+            <form>
+                <div class="form-group">
+                    <label class="form-label" for="email">Email</label><sup style="color:red;">*</sup><br>
+                    <input type="email" class="form-control" id="email" name="email">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="no_of_licenses">Number of licenses</label><sup style="color:red;">*</sup><br>
+                    <input type="text" class="form-control" id="no_of_licenses" name="no_of_licenses">
+                </div>
+                <center><button type="button" class="btn-grad" style="color:white;">Submit</button></center>
+            </form>
+        </div>
+<!--      <div class="modal-footer">
+        <button type="button" class="btn-grad">Save changes</button>
+      </div>-->
+    </div>
+  </div>
+</div>
+    <!--<img src="images/screen1.png" alt="" width="100%;"/>-->
+    <div class="jumbotron">
+        <h1>GSK animation tool</h1>
+        <p>The GSK animation tool has been created so that anyone ca create cost effective character animations in the GSK style with no experience. We've created this tool with the Content and Visual identity team using GSK's own charater style, so the animation that you can create, are brand aligned for use internally and externally.</p> 
+    </div>
+
+    <div class="container">
+        <h1 class="choose-plan">Choose your plan</h1><br>
+        <div class="row pricing-cards">
+            <div class="col col-sm-6 col-md-3 col-xs-12" >
+                <div class="card">
+                    <span class="color-strip"></span>
+                    <div class="card-content">
+                        <div class="col">
+                            <label>Temporary use License</label><br>
+                        </div>
+                        <center><img src="images/1.png"></center>
+                        <h3>Temporary use License</h3>
+                        <p>4 week access(subject to availability)</p><br><br>
+                        <button class="btn-grad" onclick="openAlert('Temporary use License')">Request Access</button>
+                        
+                    </div>
+                </div>
+                <ul>
+                    <li>Full access to the tool for 4 weeks.</li>
+                    <li>Zero coset</li>
+                    <li>Infrequent or one off use</li>
+                    <li>Can wait for a license to be available</li>
+                    <li>Projects of 4 weeks or less</li>
+                </ul>
+            </div>
+            <div class="col col-sm-6 col-md-3 col-xs-12" >
+                <div class="card">
+                    <span class="color-strip"></span>
+                    <div class="card-content">
+                        <div class="col">
+                            <label>Pay-per-month</label><br>
+                        </div>
+                        <center><img src="images/2.png"></center>
+                        <h3><sup>$</sup>80 <sub>/month</sub></h3>
+                        <p>1 month unlimited access</p><br><br>
+                        <button class="btn-grad" onclick="openAlert('Pay-per-month')">Start Now</button>
+                    </div>
+                </div>
+                <ul>
+                    <li>Full access to the tool for 1 monthly cost</li>
+                    <li>No need to wait for temporary license to become available</li>
+                    <li>using the tool less than 8 months per year</li>
+                </ul>
+            </div>
+            <div class="col col-sm-6 col-md-3 col-xs-12">
+                <div class="card">
+                    <span class="color-strip"></span>
+                    <div class="card-content">
+                        <div class="col">
+                            <label>Pay-per-year</label><br>
+                        </div>
+                        <center><img src="images/3.png"></center>
+                        <h3><sup>$</sup>720 <sub>/year</sub></h3>
+                        <p>1 year unlimited access</p><br><br>
+                        <button class="btn-grad" onclick="openAlert('Pay-per-year')">Start Now</button>
+                    </div>
+                </div>
+                <ul>
+                    <li>Full access to the tool for 1 monthly cost</li>
+                    <li>Are going top creating animations for atleast 1 year</li>
+                    <li>Are using the tool for8 months or more per year</li>
+                </ul>
+            </div>
+            <div class="col col-sm-6 col-md-3 col-xs-12" onclick="openAlert('Set-up a team')">
+                <div class="card">
+                    <span class="color-strip"></span>
+                    <div class="card-content">
+                        <div class="col">
+                            <label>Set-up a team</label><br>
+                        </div>
+                        <center><img src="images/4.png"></center>
+                        <h3>&nbsp;</h3>
+                        <p>Looking to setup more than one person?</p><br><br>
+                        <button class="btn-grad" onclick="openAlert('Pay-per-year')">Contact us</button>
+                    </div>
+                </div>
+                <ul>
+                    <li>Questions</li>
+                    <li>Schedule 1:1 training</li>
+                    <li>Register for the weekly Thurs 2:00pm UK 'brown bag' Free training</li>
+                    <li>Best practices</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
